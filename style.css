@@ -1,0 +1,267 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://www.build-review.com/wp-content/uploads/2021/03/Civil-engineers.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+/* Navigation Bar Styling */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3668AC; /* Background color for the nav bar */
+    padding: 15px 30px; /* Padding around the nav bar */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better depth */
+}
+
+.nav .logo h2 {
+    color: yellow;
+    font-size: 24px;
+    animation: fadeInLeft 1s ease-in; /* Simple fade-in animation */
+}
+
+.nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set the link text color to white */
+    font-size: 18px; /* Increase font size for the links */
+    transition: color 0.3s ease; /* Add smooth color transition for hover effect */
+}
+
+.nav ul li a:hover {
+    color: #ffeb3b; /* Change the link color on hover to yellow */
+    transform: scale(1.1); /* Slight scale up for hover effect */
+}
+
+#login {
+    color: yellow;
+}
+
+.nav input {
+    border: none;
+    height: 26px;
+    border-radius: 5px;
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button i {
+    margin-right: 8px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Login Section */
+.loginSection {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10vw;
+    animation: fadeInUp 1s ease-in;
+}
+
+.login {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 86, 179, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    text-align: center;
+    animation: bounceIn 1.2s ease; /* Bounce-in animation */
+}
+
+.login h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #fff;
+    animation: fadeInDown 1s ease;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.form-group button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-group button.login {
+    background-color: #007BFF;
+}
+
+.form-group button.register {
+    background-color: #28a745;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #3668AC;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    20% {
+        transform: scale(1.1);
+    }
+    40% {
+        transform: scale(0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    80% {
+        transform: scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

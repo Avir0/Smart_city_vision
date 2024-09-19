@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Smart City Vision</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="server.js">
+
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="logo">
+            <h2>SMART CITY MISSION</h2>
+        </div>
+        <ul>
+            <li><a id="Home" href="home.html">HOME</a></li>
+            <li><a id="About" href="about.html">ABOUT</a></li>
+            <li><a id="Login" href="loginPage.html">LOGIN</a></li>
+            <li><a id="Project_Details" href="#">PROJECT DETAILS</a></li>
+            <li><a id="Tenders" href="#">TENDERS</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" class="search-input" placeholder="Search..." aria-label="Search">
+            <button class="search-button" aria-label="Search"><i class="fas fa-search"></i> Search</button>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <main class="loginSection">
+        <div class="login">
+            <h2>Login</h2>
+            <form id="loginForm" aria-label="Login Form">
+                <div class="form-group">
+                    <label for="userID">User ID</label>
+                    <input type="text" id="userID" name="userID" placeholder="Enter your User ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="upper_user">Supervisor</option>
+                        <option value="site_engineer">Site Engineer</option>
+                        <option value="project_handler">Project Handler</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="login">Login</button>
+                    <button type="button" class="register" onclick="redirectToPage()">Register</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 SMART CITY MISSION. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Form Validation and Submission Logic
+        function validateForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get input values
+            const userID = document.getElementById('userID').value;
+            const password = document.getElementById('password').value;
+            const role = document.getElementById('role').value;
+
+            // Basic validation
+            if (userID === '' || password === '' || role === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Simulate successful login (replace with actual authentication logic)
+            alert(`Logging in as ${userID} with role ${role}`);
+            // Optionally redirect to a different page after successful login
+            // window.location.href = 'dashboard.html';
+        }
+
+        // Attach validation to the form submission
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', validateForm);
+        });
+
+        // Redirect to registration page
+        function redirectToPage() {
+            window.location.href = 'registerPage.html';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
